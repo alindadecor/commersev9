@@ -568,28 +568,28 @@
     <!-- Sidebar -->
     <aside class="orders-sidebar">
       <div class="orders-logo">
-        <div class="orders-logo-icon">📦</div>
+        <div class="orders-logo-icon">Orders</div>
         <div>
           <div style="font-weight: 600;">Order Management</div>
           <div style="font-size: 0.75rem; color: var(--text-muted);">Sweet Layers</div>
         </div>
       </div>
       
-      <nav class="orders-nav">
+        <nav class="orders-nav">
         <a href="cake-shop-owner.html" class="orders-nav-item">
-          <span>📊</span> Dashboard
+          <span>Dashboard</span> Dashboard
         </a>
         <a href="#" class="orders-nav-item active">
-          <span>📦</span> Order Management
+          <span>Orders</span> Order Management
         </a>
         <a href="kitchen-operations.html" class="orders-nav-item">
-          <span>👨‍🍳</span> Kitchen Operations
+          <span>Kitchen</span> Kitchen Operations
         </a>
         <a href="#" class="orders-nav-item">
-          <span>📈</span> Analytics
+          <span>Analytics</span> Analytics
         </a>
         <a href="#" class="orders-nav-item">
-          <span>👥</span> Customers
+          <span>Customers</span> Customers
         </a>
       </nav>
     </aside>
@@ -604,10 +604,10 @@
         </div>
         <div class="header-actions">
           <button class="btn btn-secondary" onclick="exportOrders()">
-            <span>📊</span> Export Orders
+            <span>Export</span> Export Orders
           </button>
           <button class="btn btn-primary" onclick="addNewOrder()">
-            <span>➕</span> New Order
+            <span>Add</span> New Order
           </button>
         </div>
       </header>
@@ -665,7 +665,7 @@
         <div class="table-header">
           <div class="table-title">Recent Orders</div>
           <div class="search-box">
-            <span>🔍</span>
+            <span>Search</span>
             <input type="text" placeholder="Search orders..." onkeyup="searchOrders(this.value)">
           </div>
         </div>
@@ -697,12 +697,12 @@
               <td>
                 <div class="order-items">
                   <div class="order-item">
-                    <span class="item-emoji">🥮</span>
+                    <span class="item-emoji">Product</span>
                     <span class="item-name">Heritage Mooncake</span>
                     <span class="item-quantity">x2</span>
                   </div>
                   <div class="order-item">
-                    <span class="item-emoji">🍵</span>
+                    <span class="item-emoji">Product</span>
                     <span class="item-name">Thai Tea Cake</span>
                     <span class="item-quantity">x1</span>
                   </div>
@@ -735,7 +735,7 @@
               <td>
                 <div class="order-items">
                   <div class="order-item">
-                    <span class="item-emoji">🥮</span>
+                    <span class="item-emoji">Product</span>
                     <span class="item-name">Heritage Mooncake</span>
                     <span class="item-quantity">x1</span>
                   </div>
@@ -768,12 +768,12 @@
               <td>
                 <div class="order-items">
                   <div class="order-item">
-                    <span class="item-emoji">🌿</span>
+                    <span class="item-emoji">Product</span>
                     <span class="item-name">Pandan Custard</span>
                     <span class="item-quantity">x2</span>
                   </div>
                   <div class="order-item">
-                    <span class="item-emoji">🍫</span>
+                    <span class="item-emoji">Product</span>
                     <span class="item-name">Chocolate Truffle</span>
                     <span class="item-quantity">x1</span>
                   </div>
@@ -806,7 +806,7 @@
               <td>
                 <div class="order-items">
                   <div class="order-item">
-                    <span class="item-emoji">🍫</span>
+                    <span class="item-emoji">Product</span>
                     <span class="item-name">Chocolate Truffle</span>
                     <span class="item-quantity">x3</span>
                   </div>
@@ -839,12 +839,12 @@
               <td>
                 <div class="order-items">
                   <div class="order-item">
-                    <span class="item-emoji">🍵</span>
+                    <span class="item-emoji">Product</span>
                     <span class="item-name">Thai Tea Cake</span>
                     <span class="item-quantity">x1</span>
                   </div>
                   <div class="order-item">
-                    <span class="item-emoji">🌿</span>
+                    <span class="item-emoji">Product</span>
                     <span class="item-name">Pandan Custard</span>
                     <span class="item-quantity">x1</span>
                   </div>
@@ -888,8 +888,8 @@
         id: 'ORD-2847',
         customer: { name: 'Sarah Chen', email: 'sarah.c@email.com', initials: 'SC' },
         items: [
-          { emoji: '🥮', name: 'Heritage Mooncake', quantity: 2, price: 58 },
-          { emoji: '🍵', name: 'Thai Tea Cake', quantity: 1, price: 38 }
+          { emoji: 'Product', name: 'Heritage Mooncake', quantity: 2, price: 58 },
+          { emoji: 'Product', name: 'Thai Tea Cake', quantity: 1, price: 38 }
         ],
         amount: 127,
         status: 'processing',
@@ -902,7 +902,7 @@
         id: 'ORD-2846',
         customer: { name: 'Michael Wong', email: 'm.wong@email.com', initials: 'MW' },
         items: [
-          { emoji: '🥮', name: 'Heritage Mooncake', quantity: 1, price: 58 }
+          { emoji: 'Product', name: 'Heritage Mooncake', quantity: 1, price: 58 }
         ],
         amount: 58,
         status: 'ready',

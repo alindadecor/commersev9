@@ -3,8 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Settings - Editable in Admin -->
   <title>ติดต่อเรา - Sweet Layers</title>
   <meta name="description" content="ติดต่อ Sweet Layers สั่งขนม สอบถาม หรือร่วมงานกับเรา">
+  <meta name="keywords" content="cake, pastry, mooncake, bakery, Bangkok, ขนม,เค้ก">
+  <link rel="canonical" href="https://bizcommerz-cake-shop.pages.dev/contact.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="ติดต่อเรา - Sweet Layers">
+  <meta property="og:description" content="ติดต่อ Sweet Layers สั่งขนม สอบถาม">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZS9L9R9BQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4ZS9L9R9BQ');
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  -->
+  
+  <!-- Facebook Pixel Placeholder -->
+  <!--
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -15,401 +49,176 @@
       --gray-100: #F5EDE4; --gray-200: #E8DCD0; --gray-300: #D4C4B5;
       --gray-400: #B8A08A; --gray-500: #9A7D6A; --white: #ffffff;
       --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px;
-      --shadow-md: 0 4px 16px rgba(13,42,34,0.08);
     }
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: var(--cream);
-      color: var(--brown);
-      line-height: 1.6;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--brown); }
     
-    /* Header */
-    .header {
-      background: var(--white);
-      border-bottom: 1px solid var(--gray-200);
-      padding: 12px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .nav-links {
-      display: flex;
-      gap: 24px;
-    }
-    .nav-links a {
-      color: var(--brown);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-
-    /* Hero */
-    .contact-hero {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: var(--white);
-      padding: 60px 16px;
-      text-align: center;
-    }
-    .contact-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 12px;
-    }
-    .contact-hero p { opacity: 0.9; }
-
-    /* Contact Container */
-    .contact-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 16px;
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 40px;
-    }
-
-    /* Contact Info */
-    .contact-info h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      margin-bottom: 24px;
-    }
-    .info-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-    .info-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--primary-light);
-      color: var(--primary);
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    .info-content h3 {
-      font-size: 1rem;
-      margin-bottom: 4px;
-    }
-    .info-content p, .info-content a {
-      color: var(--gray-500);
-      font-size: 0.9rem;
-      text-decoration: none;
-    }
-    .info-content a:hover { color: var(--primary); }
-
-    /* Social Links */
-    .social-links {
-      margin-top: 32px;
-    }
-    .social-links h3 {
-      font-size: 1rem;
-      margin-bottom: 16px;
-    }
-    .social-grid {
-      display: flex;
-      gap: 12px;
-    }
-    .social-btn {
-      width: 44px;
-      height: 44px;
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      text-decoration: none;
-      transition: transform 0.2s;
-    }
-    .social-btn:hover { transform: translateY(-2px); }
-    .social-line { background: #06C755; color: white; }
-    .social-fb { background: #1877F2; color: white; }
-    .social-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
-
-    /* Contact Form */
-    .contact-form {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 32px;
-    }
-    .contact-form h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      margin-bottom: 24px;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-    .form-group {
-      margin-bottom: 16px;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.875rem;
-      font-weight: 500;
-      margin-bottom: 6px;
-    }
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 12px 16px;
-      border: 2px solid var(--gray-200);
-      border-radius: var(--radius-md);
-      font-size: 1rem;
-      font-family: inherit;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: var(--primary);
-    }
-    .form-group textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-    .submit-btn {
-      width: 100%;
-      padding: 14px;
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      border-radius: var(--radius-md);
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .submit-btn:hover { background: var(--primary-dark); }
-    .submit-btn:disabled {
-      background: var(--gray-300);
-      cursor: not-allowed;
-    }
-
-    /* Map Section */
-    .map-section {
-      background: var(--white);
-      padding: 40px 16px;
-    }
-    .map-container {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .map-section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .map-placeholder {
-      aspect-ratio: 16/9;
-      background: var(--gray-100);
-      border-radius: var(--radius-lg);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: var(--gray-500);
-    }
-    .map-placeholder-icon {
-      font-size: 3rem;
-      margin-bottom: 12px;
-    }
-
-    /* Toast */
-    .toast {
-      position: fixed;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background: var(--brown);
-      color: var(--white);
-      padding: 12px 24px;
-      border-radius: 100px;
-      font-size: 0.875rem;
-      opacity: 0;
-      transition: all 0.3s;
-      z-index: 1000;
-    }
-    .toast.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
-    }
-
-    @media (max-width: 768px) {
-      .contact-container {
-        grid-template-columns: 1fr;
-      }
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-      .nav-links { display: none; }
-    }
+    .header { background: var(--white); padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; }
+    .header-left { display: flex; align-items: center; gap: 16px; }
+    .back-btn { display: flex; align-items: center; gap: 8px; color: var(--brown); text-decoration: none; font-size: 0.9rem; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--primary); }
+    .lang-btn-group { display: flex; gap: 4px; }
+    .lang-btn { padding: 6px 12px; background: var(--gray-100); border: none; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.8rem; font-weight: 600; }
+    .lang-btn.active { background: var(--primary); color: #fff; }
+    
+    .container { max-width: 800px; margin: 0 auto; padding: 24px 16px 100px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 1.75rem; margin-bottom: 8px; }
+    .subtitle { color: var(--gray-500); margin-bottom: 24px; }
+    
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    @media (max-width: 600px) { .contact-grid { grid-template-columns: 1fr; } }
+    
+    .contact-card { background: var(--white); padding: 16px; border-radius: var(--radius-lg); }
+    .contact-card h3 { font-size: 1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .contact-card p { font-size: 0.9rem; line-height: 1.6; color: var(--brown-light); }
+    .contact-card a { color: var(--primary); text-decoration: none; }
+    
+    .map-container { background: var(--white); padding: 16px; border-radius: var(--radius-lg); margin-bottom: 24px; }
+    .map-frame { width: 100%; height: 250px; border-radius: var(--radius-md); overflow: hidden; }
+    .map-frame iframe { width: 100%; height: 100%; border: 0; }
+    
+    .contact-form { background: var(--white); padding: 20px; border-radius: var(--radius-lg); }
+    .form-group { margin-bottom: 12px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 4px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 10px 14px; border: 1px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; font-family: inherit; }
+    .form-group textarea { min-height: 100px; resize: vertical; }
+    
+    .checkbox-group { display: flex; align-items: center; gap: 8px; margin: 12px 0; font-size: 0.85rem; }
+    .checkbox-group a { color: var(--primary); }
+    
+    .btn-submit { width: 100%; padding: 12px; background: var(--primary); color: #fff; border: none; border-radius: var(--radius-md); font-size: 1rem; font-weight: 600; cursor: pointer; }
+    
+    .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--white); border-top: 1px solid var(--gray-200); display: flex; padding: 10px 0; justify-content: space-around; }
+    .nav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; color: var(--gray-500); text-decoration: none; font-size: 0.7rem; }
+    .nav-item.active { color: var(--primary); }
+    .nav-item svg { width: 22px; height: 22px; }
   </style>
 </head>
 <body>
   <header class="header">
-    <div class="header-container">
-      <a href="/" class="logo">
-        <span>🍰</span>
-        <span>Sweet Layers</span>
+    <div class="header-left">
+      <a href="index.html" class="back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
       </a>
-      <nav class="nav-links">
-        <a href="/">หน้าแรก</a>
-        <a href="/shop.html">สินค้า</a>
-        <a href="/about.html">เกี่ยวกับ</a>
-        <a href="/contact.html" class="active">ติดต่อ</a>
-      </nav>
-      <a href="/cart.html" style="text-decoration: none;">🛒</a>
+      <div class="logo">Sweet Layers</div>
+    </div>
+    <div class="lang-btn-group">
+      <button class="lang-btn active" id="btnTH" onclick="setLang('th')">TH</button>
+      <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
     </div>
   </header>
 
-  <section class="contact-hero">
-    <h1>📞 ติดต่อเรา</h1>
-    <p>มีคำถาม อยากสั่งขนม หรือสนใจร่วมงาน? ติดต่อเราได้เลย</p>
-  </section>
-
-  <main class="contact-container">
-    <aside class="contact-info">
-      <h2>ข้อมูลติดต่อ</h2>
-      
-      <div class="info-item">
-        <div class="info-icon">📍</div>
-        <div class="info-content">
-          <h3>ที่อยู่ร้าน</h3>
-          <p>123 ถนนขนมหวาน<br>แขวงบางรัก เขตบางรัก<br>กรุงเทพมหานคร 10500</p>
-        </div>
+  <main class="container">
+    <h1>ติดต่อเรา</h1>
+    <p class="subtitle">Sweet Layers Artisan Cake Shop</p>
+    
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ที่อยู่
+        </h3>
+        <p>123 Bakery Street<br>Bangkok, Thailand 10110<br>
+        <a href="tel:+66840871065">084 087 1065</a><br>
+        <a href="mailto:hello@sweetlayers.com">hello@sweetlayers.com</a></p>
       </div>
-
-      <div class="info-item">
-        <div class="info-icon">📱</div>
-        <div class="info-content">
-          <h3>โทรศัพท์</h3>
-          <a href="tel:0840871065">084-087-1065</a>
-          <p style="font-size: 0.8rem;">จ.-ส. 08:00-18:00 น.</p>
-        </div>
+      <div class="contact-card">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          เวลาทำการ
+        </h3>
+        <p>จันทร์ - ศุกร์: 8:00 - 20:00<br>
+        เสาร์ - อาทิตย์: 8:00 - 21:00</p>
       </div>
-
-      <div class="info-item">
-        <div class="info-icon">✉️</div>
-        <div class="info-content">
-          <h3>อีเมล</h3>
-          <a href="mailto:hello@sweetlayers.com">hello@sweetlayers.com</a>
-        </div>
-      </div>
-
-      <div class="social-links">
-        <h3>ติดตามเรา</h3>
-        <div class="social-grid">
-          <a href="https://line.me" class="social-btn social-line" target="_blank" title="LINE">💬</a>
-          <a href="https://facebook.com" class="social-btn social-fb" target="_blank" title="Facebook">f</a>
-          <a href="https://instagram.com" class="social-btn social-ig" target="_blank" title="Instagram">📷</a>
-        </div>
-      </div>
-    </aside>
-
-    <div class="contact-form">
-      <h2>📨 ส่งข้อความถึงเรา</h2>
-      <form id="contactForm" onsubmit="handleSubmit(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">ชื่อ *</label>
-            <input type="text" id="name" placeholder="ชื่อของคุณ" required>
-          </div>
-          <div class="form-group">
-            <label for="email">อีเมล *</label>
-            <input type="email" id="email" placeholder="email@example.com" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="phone">เบอร์โทรศัพท์</label>
-          <input type="tel" id="phone" placeholder="08xxxxxxxx">
-        </div>
-        <div class="form-group">
-          <label for="subject">เรื่อง *</label>
-          <select id="subject" required>
-            <option value="">เลือกหัวข้อ</option>
-            <option value="order">สั่งซื้อสินค้า</option>
-            <option value="wholesale">สนใจขายส่ง</option>
-            <option value="event">จัดเลี้ยง/อีเวนต์</option>
-            <option value="feedback">ข้อเสนอแนะ</option>
-            <option value="other">อื่นๆ</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">ข้อความ *</label>
-          <textarea id="message" placeholder="บอกเราว่าคุณต้องการอะไร..." required></textarea>
-        </div>
-        <button type="submit" class="submit-btn" id="submitBtn">
-          ส่งข้อความ
-        </button>
-      </form>
     </div>
+    
+    <div class="map-container">
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.5!2d100.5!3d13.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!3m0!2m3!1e1!2f0!3e0!1m0!2e1!3e1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    
+    <h2 style="margin-bottom: 12px;">ส่งข้อความ</h2>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label>ชื่อ-นามสกุล</label>
+        <input type="text" name="name" required>
+      </div>
+      <div class="form-group">
+        <label>อีเมล</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label>เบอร์โทรศัพท์</label>
+        <input type="tel" name="phone">
+      </div>
+      <div class="form-group">
+        <label>ข้อความ</label>
+        <textarea name="message" required></textarea>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="privacy" required>
+        <label for="privacy">ยอมรับ <a href="#">นโยบายความเป็นส่วนตัว</a></label>
+      </div>
+      <button type="submit" class="btn-submit">ส่งข้อความ</button>
+    </form>
   </main>
 
-  <section class="map-section">
-    <div class="map-container">
-      <h2>🗺️ แผนที่ร้าน</h2>
-      <div class="map-placeholder">
-        <div class="map-placeholder-icon">📍</div>
-        <p>123 ถนนขนมหวาน แขวงบางรัก เขตบางรัก กรุงเทพฯ 10500</p>
-        <p style="font-size: 0.8rem; margin-top: 8px;">(แผนที่จริงจะแสดงที่นี่)</p>
-      </div>
-    </div>
-  </section>
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="shop.html" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span>Shop</span>
+    </a>
+    <a href="cart.html" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span>Cart</span>
+    </a>
+    <a href="#" class="nav-item" onclick="openProfile(); return false;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Login</span>
+    </a>
+  </nav>
 
-  <div class="toast" id="toast"></div>
-
+  <script src="js/i18n.js"></script>
+  <script src="js/member-system.js"></script>
   <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      const btn = document.getElementById('submitBtn');
-      
-      btn.disabled = true;
-      btn.textContent = 'กำลังส่ง...';
-      
-      // Simulate sending
-      setTimeout(() => {
-        showToast('ส่งข้อความสำเร็จ! เราจะติดต่อกลับโดยเร็ว');
-        document.getElementById('contactForm').reset();
-        btn.disabled = false;
-        btn.textContent = 'ส่งข้อความ';
-      }, 1500);
+    function setLang(lang) {
+      i18n.set(lang);
+      document.getElementById('btnTH').classList.toggle('active', lang === 'th');
+      document.getElementById('btnEN').classList.toggle('active', lang === 'en');
     }
 
-    function showToast(msg) {
-      const t = document.getElementById('toast');
-      t.textContent = msg;
-      t.classList.add('show');
-      setTimeout(() => t.classList.remove('show'), 3000);
+    function openProfile() {
+      const member = memberSystem.getMember();
+      if (member && member.email) {
+        window.location.href = 'profile.html';
+      } else {
+        showLoginModal();
+      }
     }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const contacts = JSON.parse(localStorage.getItem('contacts') || '[]');
+      contacts.unshift({
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        message: form.message.value,
+        createdAt: Date.now()
+      });
+      localStorage.setItem('contacts', JSON.stringify(contacts));
+      alert('ส่งข้อความสำเร็จ! Thank you!');
+      form.reset();
+    }
+
+    // Init lang
+    setLang(i18n.getLang());
   </script>
 </body>
 </html>

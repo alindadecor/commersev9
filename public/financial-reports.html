@@ -519,7 +519,7 @@
     <!-- Sidebar -->
     <aside class="financial-sidebar">
       <div class="financial-logo">
-        <div class="financial-logo-icon">💰</div>
+        <div class="financial-logo-icon">Financial</div>
         <div>
           <div style="font-weight: 600;">Financial Reports</div>
           <div style="font-size: 0.75rem; color: var(--text-muted);">Sweet Layers</div>
@@ -528,19 +528,19 @@
       
       <nav class="financial-nav">
         <a href="cake-shop-owner.html" class="financial-nav-item">
-          <span>📊</span> Dashboard
+          <span>Dashboard</span> Dashboard
         </a>
         <a href="#" class="financial-nav-item active">
-          <span>💰</span> Financial Reports
+          <span>Financial</span> Financial Reports
         </a>
         <a href="#" class="financial-nav-item">
-          <span>📈</span> Analytics
+          <span>Analytics</span> Analytics
         </a>
         <a href="#" class="financial-nav-item">
-          <span>👥</span> Customers
+          <span>Customers</span> Customers
         </a>
         <a href="#" class="financial-nav-item">
-          <span>📱</span> Marketing
+          <span>Marketing</span> Marketing
         </a>
       </nav>
     </aside>
@@ -636,61 +636,61 @@
       
       <!-- Charts Section -->
       <div class="charts-section">
-        <div class="chart-card">
-          <div class="chart-title">
-            <span>📈</span> Revenue Trend
+          <div class="chart-card">
+            <div class="chart-title">
+              <span>Revenue</span> Revenue Trend
+            </div>
+            <div class="chart-container">
+              <canvas id="revenueChart"></canvas>
+            </div>
           </div>
-          <div class="chart-container">
-            <canvas id="revenueChart"></canvas>
+          
+          <div class="chart-card">
+            <div class="chart-title">
+              <span>Product</span> Revenue by Product
+            </div>
+            <div class="chart-container">
+              <canvas id="productChart"></canvas>
+            </div>
           </div>
         </div>
         
-        <div class="chart-card">
+        <!-- Cost Breakdown -->
+        <div class="cost-breakdown">
           <div class="chart-title">
-            <span>🥧</span> Revenue by Product
+            <span>Costs</span> Cost Breakdown
           </div>
-          <div class="chart-container">
-            <canvas id="productChart"></canvas>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Cost Breakdown -->
-      <div class="cost-breakdown">
-        <div class="chart-title">
-          <span>💸</span> Cost Breakdown
-        </div>
-        <div class="cost-list">
-          <div class="cost-item">
-            <div class="cost-icon ingredients">🥖</div>
-            <div class="cost-info">
-              <div class="cost-name">Ingredients & Materials</div>
-              <div class="cost-details">Flour, sugar, eggs, specialty ingredients</div>
+          <div class="cost-list">
+            <div class="cost-item">
+              <div class="cost-icon ingredients">Food</div>
+              <div class="cost-info">
+                <div class="cost-name">Ingredients & Materials</div>
+                <div class="cost-details">Flour, sugar, eggs, specialty ingredients</div>
+              </div>
+              <div class="cost-amount">
+                <div class="cost-value">$5,234</div>
+                <div class="cost-percentage">34.2%</div>
+              </div>
             </div>
-            <div class="cost-amount">
-              <div class="cost-value">$5,234</div>
-              <div class="cost-percentage">34.2%</div>
+            
+            <div class="cost-item">
+              <div class="cost-icon labor">Labor</div>
+              <div class="cost-info">
+                <div class="cost-name">Labor Costs</div>
+                <div class="cost-details">Salaries, wages, benefits for 4 staff</div>
+              </div>
+              <div class="cost-amount">
+                <div class="cost-value">$6,847</div>
+                <div class="cost-percentage">44.7%</div>
+              </div>
             </div>
-          </div>
-          
-          <div class="cost-item">
-            <div class="cost-icon labor">👨‍🍳</div>
-            <div class="cost-info">
-              <div class="cost-name">Labor Costs</div>
-              <div class="cost-details">Salaries, wages, benefits for 4 staff</div>
-            </div>
-            <div class="cost-amount">
-              <div class="cost-value">$6,847</div>
-              <div class="cost-percentage">44.7%</div>
-            </div>
-          </div>
-          
-          <div class="cost-item">
-            <div class="cost-icon overhead">⚡</div>
-            <div class="cost-info">
-              <div class="cost-name">Overhead</div>
-              <div class="cost-details">Rent, utilities, insurance, maintenance</div>
-            </div>
+            
+            <div class="cost-item">
+              <div class="cost-icon overhead">Overhead</div>
+              <div class="cost-info">
+                <div class="cost-name">Overhead</div>
+                <div class="cost-details">Rent, utilities, insurance, maintenance</div>
+              </div>
             <div class="cost-amount">
               <div class="cost-value">$2,189</div>
               <div class="cost-percentage">14.3%</div>
@@ -698,7 +698,7 @@
           </div>
           
           <div class="cost-item">
-            <div class="cost-icon marketing">📱</div>
+            <div class="cost-icon marketing">Marketing</div>
             <div class="cost-info">
               <div class="cost-name">Marketing & Advertising</div>
               <div class="cost-details">Social media, local ads, promotions</div>
@@ -714,7 +714,7 @@
       <!-- Profit Analysis -->
       <div class="profit-analysis">
         <div class="chart-title">
-          <span>📊</span> Profit Analysis by Product
+          <span>Profit</span> Profit Analysis by Product
         </div>
         <div class="profit-metrics">
           <div class="profit-metric">
@@ -748,13 +748,13 @@
         </div>
         <div style="display: flex; gap: 12px;">
           <button class="btn btn-secondary" onclick="exportReport('pdf')">
-            <span>📄</span> Export PDF
+            <span>PDF</span> Export PDF
           </button>
           <button class="btn btn-secondary" onclick="exportReport('excel')">
-            <span>📊</span> Export Excel
+            <span>Excel</span> Export Excel
           </button>
           <button class="btn btn-success" onclick="exportReport('quickbooks')">
-            <span>💼</span> Sync to QuickBooks
+            <span>Sync</span> Sync to QuickBooks
           </button>
         </div>
       </div>

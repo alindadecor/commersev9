@@ -380,7 +380,7 @@
         </svg>
         กลับตะกร้า
       </a>
-      <div class="logo">🍰 Sweet Layers</div>
+      <div class="logo">Sweet Layers</div>
       <div class="secure-badge">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -395,7 +395,7 @@
     <div class="checkout-form">
       <!-- Customer Info -->
       <div class="form-section">
-        <h2>👤 ข้อมูลลูกค้า</h2>
+        <h2>ข้อมูลลูกค้า</h2>
         <div class="form-row">
           <div class="form-group">
             <label for="name">ชื่อ-นามสกุล *</label>
@@ -414,7 +414,7 @@
 
       <!-- Shipping -->
       <div class="form-section">
-        <h2>📍 ที่อยู่จัดส่ง</h2>
+        <h2>ที่อยู่จัดส่ง</h2>
         <div class="form-group">
           <label for="address">ที่อยู่ *</label>
           <textarea id="address" placeholder="บ้านเลขที่ ถนน ตำบล อำเภอ" required></textarea>
@@ -437,11 +437,11 @@
 
       <!-- Payment -->
       <div class="form-section">
-        <h2>💳 วิธีชำระเงิน</h2>
+        <h2>วิธีชำระเงิน</h2>
         <div class="payment-methods">
           <label class="payment-method active" onclick="selectPayment('promptpay')">
             <input type="radio" name="payment" value="promptpay" checked>
-            <div class="payment-method-icon">📱</div>
+            <div class="payment-method-icon">Pay</div>
             <div class="payment-method-info">
               <div class="payment-method-name">พร้อมเพย์ (PromptPay)</div>
               <div class="payment-method-desc">สแกน QR Code ผ่านแอพธนาคาร</div>
@@ -450,7 +450,7 @@
           
           <label class="payment-method" onclick="selectPayment('cod')">
             <input type="radio" name="payment" value="cod">
-            <div class="payment-method-icon">💵</div>
+            <div class="payment-method-icon">Cash</div>
             <div class="payment-method-info">
               <div class="payment-method-name">เก็บเงินปลายทาง</div>
               <div class="payment-method-desc">ชำระเมื่อได้รับสินค้า (+20 บาท)</div>
@@ -469,7 +469,7 @@
           
           <label class="slip-upload" id="slipUpload">
             <input type="file" id="slipInput" accept="image/*" onchange="handleSlipUpload(this)">
-            <div class="slip-upload-icon">📤</div>
+            <div class="slip-upload-icon">Upload</div>
             <div>คลิกเพื่ออัพโหลดสลิป</div>
             <div style="font-size: 0.8rem; color: var(--gray-500);">รองรับ JPG, PNG</div>
             <img id="slipPreview" class="slip-preview" style="display: none;">
@@ -480,7 +480,7 @@
 
     <!-- Right: Summary -->
     <aside class="order-summary">
-      <h3 class="summary-title">🛒 สรุปคำสั่งซื้อ</h3>
+      <h3 class="summary-title">สรุปคำสั่งซื้อ</h3>
       <div class="summary-items" id="summaryItems">
         <!-- Items loaded by JS -->
       </div>

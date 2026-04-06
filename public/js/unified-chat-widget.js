@@ -47,7 +47,7 @@ class UnifiedChatWidget {
   }
 
   async init() {
-    console.log('💬 Initializing Unified Chat Widget...');
+    console.log('Initializing Unified Chat Widget...');
     
     // Create chat UI
     this.createChatUI();
@@ -64,7 +64,7 @@ class UnifiedChatWidget {
     // Show welcome message
     this.showWelcomeMessage();
     
-    console.log('✅ Unified Chat Widget ready!');
+    console.log('Unified Chat Widget ready!');
   }
 
   createChatUI() {
@@ -74,7 +74,7 @@ class UnifiedChatWidget {
     chatContainer.className = 'unified-chat-widget';
     chatContainer.innerHTML = `
       <div class="chat-bubble" id="chatBubble">
-        <div class="bubble-icon"><img src="images/mooncake-icon-optimized.svg" alt="🧁" style="width:32px;height:32px;" /></div>
+        <div class="bubble-icon"><img src="images/mooncake-icon-optimized.svg" alt="Cake" style="width:32px;height:32px;" /></div>
         <div class="bubble-badge" id="chatBadge">1</div>
         <div class="pulse-ring"></div>
       </div>
@@ -83,10 +83,10 @@ class UnifiedChatWidget {
         <div class="chat-header">
           <div class="header-left">
             <div class="header-title">Sweet Layers Assistant</div>
-            <div class="header-status" id="connectionStatus">🟢 Connected</div>
+            <div class="header-status" id="connectionStatus">Online</div>
           </div>
           <div class="header-actions">
-            <button class="header-btn" id="voiceBtn" title="Voice Input">🎤</button>
+            <button class="header-btn" id="voiceBtn" title="Voice Input">Voice</button>
             <button class="header-btn" id="minimizeBtn" title="Minimize">−</button>
             <button class="header-btn" id="closeBtn" title="Close">×</button>
           </div>
@@ -95,18 +95,18 @@ class UnifiedChatWidget {
         <div class="chat-body">
           <div class="chat-messages" id="chatMessages"></div>
           
-          <div class="quick-actions" id="quickActions">
-            <button class="quick-btn" data-action="order">🛒 Place Order</button>
-            <button class="quick-btn" data-action="track">📦 Track Order</button>
-            <button class="quick-btn" data-action="menu">📋 View Menu</button>
-            <button class="quick-btn" data-action="help">❓ Help</button>
-          </div>
+            <div class="quick-actions" id="quickActions">
+              <button class="quick-btn" data-action="order">Place Order</button>
+              <button class="quick-btn" data-action="track">Track Order</button>
+              <button class="quick-btn" data-action="menu">View Menu</button>
+              <button class="quick-btn" data-action="help">Help</button>
+            </div>
         </div>
         
         <div class="chat-input-area">
           <div class="input-container">
             <input type="text" id="chatInput" placeholder="Type your message or say 'order 2 chocolate cakes'..." />
-            <button class="send-btn" id="sendBtn">📤</button>
+            <button class="send-btn" id="sendBtn">Send</button>
           </div>
           <div class="input-suggestions" id="inputSuggestions"></div>
         </div>
@@ -200,7 +200,7 @@ class UnifiedChatWidget {
     } catch (err) {
       console.error('Failed to connect to engine:', err);
       this.state.connected = false;
-      this.updateConnectionStatus('🔴 Offline');
+      this.updateConnectionStatus('Offline');
     }
   }
 
@@ -210,7 +210,7 @@ class UnifiedChatWidget {
       
       this.ws.onopen = () => {
         console.log('Chat WebSocket connected');
-        this.updateConnectionStatus('🟢 Connected');
+        this.updateConnectionStatus('Connected');
         
         // Send session info
         this.ws.send(JSON.stringify({
@@ -229,7 +229,7 @@ class UnifiedChatWidget {
 
       this.ws.onclose = () => {
         console.log('Chat WebSocket disconnected');
-        this.updateConnectionStatus('🟠 Reconnecting...');
+        this.updateConnectionStatus('Reconnecting...');
         setTimeout(() => this.connectWebSocket(), 5000);
       };
 
@@ -468,7 +468,7 @@ class UnifiedChatWidget {
 
   async processMenuInquiry(message) {
     return {
-      text: "Here's our menu! 🎂\n\n• Black Sesame Mooncake - $18\n• Pandan Custard Mooncake - $12\n• Traditional Red Bean - $22\n• Taro Coconut Delight - $16\n• Salted Egg Yolk Lava - $28\n• Heritage Bakery Set - $65\n\nWhat would you like to order?",
+      text: "Here's our menu!\n\n• Black Sesame Mooncake - $18\n• Pandan Custard Mooncake - $12\n• Traditional Red Bean - $22\n• Taro Coconut Delight - $16\n• Salted Egg Yolk Lava - $28\n• Heritage Bakery Set - $65\n\nWhat would you like to order?",
       actions: [
         { text: 'Order Bestseller', action: 'order_bestseller' },
         { text: 'Order Gluten-Free', action: 'order_glutenfree' },
@@ -479,7 +479,7 @@ class UnifiedChatWidget {
 
   async processHelpRequest(message) {
     return {
-      text: "I'm here to help! I can assist you with:\n\n🛒 Placing orders (just say what you want)\n📦 Tracking order status\n📋 Menu information\n💳 Payment and checkout\n🚚 Delivery scheduling\n\nHow can I help you today?",
+      text: "I'm here to help! I can assist you with:\n\nPlacing orders (just say what you want)\nTracking order status\nMenu information\nPayment and checkout\nDelivery scheduling\n\nHow can I help you today?",
       actions: [
         { text: 'Place Order', action: 'start_order' },
         { text: 'Track Order', action: 'track_order' },
@@ -491,7 +491,7 @@ class UnifiedChatWidget {
   async processTaskMessage(message) {
     // For shop staff - task management
     return {
-      text: "Task management feature detected. Current tasks:\n\n✅ Bake 20 Black Sesame Mooncakes\n⏰ Prepare 5 gift boxes\n📞 Call customer about order #1234\n\nWould you like to add a new task?",
+      text: "Task management feature detected. Current tasks:\n\n[x] Bake 20 Black Sesame Mooncakes\n[ ] Prepare 5 gift boxes\n[ ] Call customer about order #1234\n\nWould you like to add a new task?",
       actions: [
         { text: 'Add Task', action: 'add_task' },
         { text: 'View All Tasks', action: 'view_tasks' },
@@ -629,11 +629,11 @@ class UnifiedChatWidget {
   showWelcomeMessage() {
     setTimeout(() => {
       this.addMessage('assistant', 
-        "🎂 Welcome to Sweet Layers!\n\n🌟 **Today's Specials:**\n• Black Sesame Mooncake - $18 (Bestseller!)\n• Taro Coconut Cake - $15\n• Free delivery on orders $50+\n\n💬 I can help you:\n✅ Place an order in seconds\n✅ Track your delivery\n✅ Get personalized recommendations\n\nWhat would you like today?",
+        "Welcome to Sweet Layers!\n\n**Today's Specials:**\n• Black Sesame Mooncake - $18 (Bestseller!)\n• Taro Coconut Cake - $15\n• Free delivery on orders $50+\n\nI can help you:\n- Place an order in seconds\n- Track your delivery\n- Get personalized recommendations\n\nWhat would you like today?",
         [
-          { text: '🛒 Shop Now', action: 'start_order' },
-          { text: '🔥 Bestsellers', action: 'show_bestsellers' },
-          { text: '🎁 Gift Ideas', action: 'show_gifts' }
+          { text: 'Shop Now', action: 'start_order' },
+          { text: 'Bestsellers', action: 'show_bestsellers' },
+          { text: 'Gift Ideas', action: 'show_gifts' }
         ]
       );
     }, 1000);
@@ -787,7 +787,7 @@ class UnifiedChatWidget {
     ).join('\n');
 
     this.addMessage('assistant', 
-      `🛒 Your cart:\n\n${cartText}\n\nTotal: $${total.toFixed(2)}`,
+      `Your cart:\n\n${cartText}\n\nTotal: $${total.toFixed(2)}`,
       [
         { text: 'Checkout', action: 'checkout' },
         { text: 'Clear Cart', action: 'clear_order' }

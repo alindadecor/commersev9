@@ -821,7 +821,7 @@
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="logo">
-        <div class="logo-icon">🧁</div>
+        <div class="logo-icon">Cake</div>
         <div class="logo-text">
           <h1>Sweet Layers</h1>
           <p>Business Dashboard</p>
@@ -921,24 +921,24 @@
                 </div>
                 <div class="search-results" id="searchResults">
                   <div class="search-result-item" onclick="goToOrder('ORD-2847')">
-                    <div class="search-result-icon">📦</div>
+                    <div class="search-result-icon">Order</div>
                     <div class="search-result-info">
                       <div class="search-result-title">Order #ORD-2847</div>
                       <div class="search-result-desc">Sarah Chen • $127.00 • Processing</div>
                     </div>
                   </div>
                   <div class="search-result-item" onclick="goToCustomer('sarah-chen')">
-                    <div class="search-result-icon">👤</div>
+                    <div class="search-result-icon">User</div>
                     <div class="search-result-info">
                       <div class="search-result-title">Sarah Chen</div>
                       <div class="search-result-desc">VIP Customer • 12 orders • $1,247 total</div>
                     </div>
                   </div>
                   <div class="search-result-item" onclick="goToProduct('mooncake')">
-                    <div class="search-result-icon">🥮</div>
+                    <div class="search-result-icon">Product</div>
                     <div class="search-result-info">
                       <div class="search-result-title">Heritage Mooncake</div>
-                      <div class="search-result-desc">342 orders • $58.00 each • 4.9★ rating</div>
+                      <div class="search-result-desc">342 orders • $58.00 each • 4.9 rating</div>
                     </div>
                   </div>
                 </div>
@@ -993,7 +993,7 @@
       </div>
       <div class="chat-messages" id="chatMessages">
         <div class="chat-message">
-          <div class="chat-avatar">🧁</div>
+          <div class="chat-avatar">Cake</div>
           <div class="chat-bubble">
             Hello! I'm your Sweet Layers AI assistant. I can help you with:
             <br>• Order management and tracking
@@ -1004,19 +1004,19 @@
           </div>
         </div>
         <div class="chat-message user">
-          <div class="chat-avatar">👤</div>
+          <div class="chat-avatar">User</div>
           <div class="chat-bubble">
             Show me today's urgent orders
           </div>
         </div>
         <div class="chat-message">
-          <div class="chat-avatar">🧁</div>
+          <div class="chat-avatar">Cake</div>
           <div class="chat-bubble">
             You have <strong>3 urgent orders</strong> today:
             <br><br>
-            🥮 <strong>Sarah Chen</strong> - Custom Wedding Cake (3 tiers) - Due: 2:00 PM
-            <br>🍵 <strong>Michael Wong</strong> - Thai Tea Cake Batch (6 pcs) - Due: 4:00 PM  
-            <br>🎂 <strong>Lisa Park</strong> - Birthday Cake with custom message - Due: 3:00 PM
+            <strong>Sarah Chen</strong> - Custom Wedding Cake (3 tiers) - Due: 2:00 PM
+            <br><strong>Michael Wong</strong> - Thai Tea Cake Batch (6 pcs) - Due: 4:00 PM  
+            <br><strong>Lisa Park</strong> - Birthday Cake with custom message - Due: 3:00 PM
             <br><br>
             Would you like me to prioritize these in the kitchen schedule?
           </div>
@@ -1526,21 +1526,21 @@
       const mockResults = [
         {
           type: 'order',
-          icon: '📦',
+          icon: 'Order',
           title: `Order matching "${query}"`,
           desc: 'Customer • Amount • Status',
           id: 'search-order'
         },
         {
           type: 'customer', 
-          icon: '👤',
+          icon: 'User',
           title: `Customer matching "${query}"`,
           desc: 'Orders • Total spent • Status',
           id: 'search-customer'
         },
         {
           type: 'product',
-          icon: '🥮', 
+          icon: 'Product', 
           title: `Product matching "${query}"`,
           desc: 'Orders • Price • Rating',
           id: 'search-product'
@@ -1614,7 +1614,7 @@
       const userMessage = document.createElement('div');
       userMessage.className = 'chat-message user';
       userMessage.innerHTML = `
-        <div class="chat-avatar">👤</div>
+        <div class="chat-avatar">User</div>
         <div class="chat-bubble">${message}</div>
       `;
       messagesContainer.appendChild(userMessage);
@@ -1627,7 +1627,7 @@
         const aiMessage = document.createElement('div');
         aiMessage.className = 'chat-message';
         aiMessage.innerHTML = `
-          <div class="chat-avatar">🧁</div>
+          <div class="chat-avatar">Cake</div>
           <div class="chat-bubble">
             I'm processing your request about "${message}". Let me help you with that...
             <br><br>
