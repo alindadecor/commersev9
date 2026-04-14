@@ -34,9 +34,10 @@
     "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "commander": "^11.1.0",
     "@cloudflare/workers-types": "^4.20260408.1",
     "@types/node": "^20.0.0",
+    "agentation": "^3.0.2",
+    "commander": "^11.1.0",
     "playwright": "^1.40.0",
     "tsx": "^4.7.0",
     "typescript": "^5.4.0",

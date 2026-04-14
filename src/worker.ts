@@ -1008,3 +1008,5 @@ export class EngineState {
     return new Response('Engine State DO', { status: 200 });
   }
 }
+
+export { EngineState as EngineStateV2 };
